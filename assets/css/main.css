@@ -3748,9 +3748,10 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#nav {
-				display: none;
+				background: none;
+				margin-top: 1%;
+				margin-right: 0px;
 			}
-
 		}
 
 /* Main */
