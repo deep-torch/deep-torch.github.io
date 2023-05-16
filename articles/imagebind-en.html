@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2VSWFJ4P2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-G2VSWFJ4P2');
+		</script>
+		<title>ImageBind</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<img id="deep-torch-logo" src="../assets/images/logo.jpg" />
+						<span id="deep-torch-header" class="logo">Deep Torch</span>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/company/93786086/" class="icon brands fa-linkedin"><span class="label">Linked in</span></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=100091574053236&mibextid=LQQJ4d" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">May 16, 2023</span>
+									<p style="font-size: 4rem; font-style: normal; font-weight: bolder;">
+                                        ImageBind
+                                    </p>
+								</header>
+								<div >
+									<p>
+										"IMAGEBIND, an approach to learn a joint embedding across six different modalities - images, text, audio, depth, thermal, and IMU data (which measures a body's specific force, angular rate, and sometimes the orientation of the body)."
+									</p>
+									<p>
+										Embedding is like a vector space that we encode the semantic information into its basis ( you can think of them as the axes for simplification ), for example one axis is for faces, another for animals, and one for body length ... etc.
+									</p>
+									<p>
+										Note that the previous example is simplified to get the intuition. We will have another article later to discuss what embedding is.
+									</p>
+									<p>
+										The main intuition in the paper is that "a single image can bind together many experiences – an image of a beach can remind us of the sound of waves, the texture of the sand, a breeze, or even inspire a poem. This ‘binding’ property of images offers many sources of supervision to learn visual features by aligning them with any of the sensory experiences associated with images."
+									</p>
+									<p>
+										"It does not need datasets where all modalities co-occur with each other. Instead, we leverage the binding property of images, and we show that just aligning each modality’s embedding to image embeddings leads to an emergent alignment across all of the modalities."
+									</p>
+									<p>
+										What they mean here is that generally, for training a model to be good at different modality together, we should use all modalities in each example.
+									</p>
+									<p>
+										For example, if we want it to bind the sound of sea waves with the text "sea waves" with the image of the waves, we should provide:
+										<br />
+										(sea waves image, sea waves sound, "sea waves")
+										<br />
+										but this is difficult, especially when we have many modalities, but their approach only need the images to occur with other modality, so our examples become:
+										<br />
+										(sea waves image, sea waves sound), (sea waves image, "sea waves")
+									</p>
+									<p>
+										This different from previous approaches as they state:
+										<br />
+										"In contrast, IMAGEBIND does not require explicit paired data between all modalities and instead leverages image as a natural weak supervision for unifying modalities."
+									</p>
+									<p>
+										What they mean here by weak supervision is that we do not explicitly give the model the binding between different modalities. Instead, we rely on the natural binding property in images.
+									</p>
+									<p>
+										<b>But how they train it?</b>
+										<br />
+										First, they use Transformer architecture to encode the data into vectors ( one for each modality except for images and video in which they used the same encoder) so that we can learn the embeddings.
+									</p>
+									<p>
+										They have used Contrastive learning, which is a general technique for learning an embedding space by using pairs of related examples (positives) and unrelated examples (negatives).
+									</p>
+									<p>
+										Let's call the image embedding q_i and label embedding for other modality k_i.
+The loss makes q_i and k_i closer in the joint embedding space and thus aligns the image and the other label.
+									</p>
+									<p>
+										This is a great advancement because the model will learn better concepts about the world and will have a good general understanding.
+These models are called foundation models since we can use them to build models for other tasks because they have this general understanding. They are like BERT and GPT in NLP, for example.
+									</p>
+									<a href="https://arxiv.org/abs/2305.05665">The paper</a>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="..assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
