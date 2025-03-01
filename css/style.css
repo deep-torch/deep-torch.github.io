@@ -957,13 +957,14 @@ footer {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #075473 0%, #08678C 100%);
+    display: flex;
+    flex-direction: column;
     padding: 4rem 2rem;
     border-radius: 15px;
     margin: 2rem 0;
     position: relative;
     overflow: hidden;
+    align-items: center;
 }
 
 .testimonials h2 {
@@ -973,35 +974,50 @@ footer {
     color: var(--accent-orange);
 }
 
-/* Carousel Container */
-.carousel {
-    position: relative;
-    overflow: hidden;
+/* Swiper */
+.swiper-container {
     width: 100%;
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px 0;
 }
 
-/* Carousel Track */
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.swiper-wrapper {
+    transition-timing-function: linear; /* Optional: matches your original easing */
 }
 
-/* Carousel Slides */
-.carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
+.swiper-slide {
+    height: auto; /* Maintain content height */
+}
+
+/* Custom navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.2rem;
 }
 
 /* Testimonial Card */
 .testimonial-card {
-    background: var(--main-bg);
-    border-radius: 15px;
+    width: 95%; /* Slight margin */
+    height: 95%;
+    margin: 0 auto;
     padding: 3.5rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #075473 0%, #08678C 100%);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     position: relative;
@@ -1027,6 +1043,10 @@ footer {
     margin: 0;
 }
 
+.student-city {
+    font-weight: lighter;
+}
+
 .student-quote {
     font-style: italic;
     color: var(--accent-peach);
@@ -1044,6 +1064,17 @@ footer {
     left: -0.5rem;
     top: -1rem;
     color: var(--secondary-color);
+}
+
+[dir="rtl"] .student-quote {
+    padding-right: 1.5rem;
+    border-right: 3px solid var(--secondary-color);
+    margin: 1.5rem 0;
+}
+
+[dir="rtl"] .student-quote::before {
+    right: -0.5rem;
+    top: -1rem;
 }
 
 blockquote:after {
@@ -1098,45 +1129,27 @@ blockquote:after {
 }
 
 
-/* Navigation Buttons */
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    font-size: 18px;
-    z-index: 10;
-}
 
-.carousel-button--left {
-    left: 10px;
-}
-
-.carousel-button--right {
-    right: 10px;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.carousel-button:focus {
-    outline: none;
-}
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
     .testimonial-card {
         padding: 15px;
     }
+}
 
-    .carousel-button {
-        font-size: 16px;
-        padding: 8px;
-    }
+.icons-attribution {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.icons-attribution a {
+    display: block;
+    text-decoration: none;
+    color: var(--secondary-bg);
+    font-size: small;
+    font-weight: 100;
 }

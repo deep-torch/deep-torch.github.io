@@ -15,6 +15,7 @@
     <title>DeepTorch</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -94,41 +95,114 @@
 
         <section class="testimonials">
             <h2 data-translate="testimonials_title">Student Testimonials</h2>
-            <div class="carousel">
-                <button class="carousel-button carousel-button--left" aria-label="Previous Slide">&larr;</button>
-                <div class="carousel-track-container">
-                    <ul class="carousel-track">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
                         <!-- Slide 1 -->
-                        <li class="carousel-slide">
+                        <div class="swiper-slide">
                             <div class="testimonial-card">
                                 <div class="student-header">
-                                    <img src="images/logo.jpeg" alt="[Name]" class="student-img">
-                                    <h3 class="student-name">[Name]</h3>
+                                    <img src="images/students/qusai_triboush.jpg" alt="Qusai Triboush" class="student-img">
+                                    <h3 class="student-name">Qusai Triboush</h3>
+                                    <h4 class="student-city" data-en="Latakia, Syria" data-ar="اللاذقية، سوريا"></h4>
                                 </div>
-                                <blockquote class="student-quote">
-                                    This program transformed my career path completely. The practical approach helped me land my dream job!
+                                <blockquote 
+                                    class="student-quote"
+                                    data-en="One of the best training programs l've ever attended, and I never regret being part of it."
+                                    data-ar="واحد من أفضل البرامج التدريبية التي حضرتها، لم أندم أبدًا على المشاركة."
+                                    >
                                 </blockquote>
-                                <p class="student-description">
-                                    Ahmed completed our AI program in 2022. He now works as a senior developer at TechCorp.
+                                <p class="student-description"
+                                    data-en="Qusai began our Mentorship program at Level 1, developing a simple classification model from scratch. Progressing to Level 2, he successfully created a high-performing OCR model, skillfully applying insights from multiple research papers. Now, at Level 3, Qusai is working on an advanced recommendation system enhanced with large language models (LLMs)."
+                                    data-ar="قصي بدء في المستوى الأول من برنامجنا التوجيهي حيث قام بتطوير نموذج تصنيف بدون استعمال نماذج جاهزة. انتقل بعد ذلك إلى المستوى الثاني حيث قام ببناء نموذج OCR بمهارة عالية عن طريق تطبيق أفكار من عدة أوراق بحثية. الآن في المستوى الثالث قصي يعمل على تطوير نظام اقتراحات متطور محسن باستعمال النماذج اللغوية الكبيرة LLMs."
+                                >
                                 </p>
                                 <div class="student-contact">
-                                    <a href="#" class="linkedin-btn">
+                                    <a href="https://www.linkedin.com/in/qusai-triboush-384396209/" class="linkedin-btn">
                                         <i class="fab fa-linkedin"></i>
                                         <span>Connect</span>
                                     </a>
-                                    <a href="mailto:#" class="email-btn">
+                                    <a href="mailto:qousaitriboush@gmail.com" class="email-btn">
                                         <i class="far fa-envelope"></i>
                                         <span>Email</span>
                                     </a>
                                 </div>
-                                
                             </div>
-                        </li>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="student-header">
+                                    <img src="images/students/female_student.png" alt="Fadela Zidan" class="student-img">
+                                    <h3 class="student-name">Fadela Zidan</h3>
+                                    <h4 class="student-city" data-en="Damascus, Syria" data-ar="دمشق، سوريا"></h4>
+                                </div>
+                                <blockquote
+                                    class="student-quote"
+                                    data-en="Each phase, from theoretical learning to practical execution, was an opportunity to deepen my AI skills and refine my expertise."
+                                    data-ar="كل مرحلة من التعلم النظري إلى التطبيق العملي كانت فرصة لصقل مهاراتي و تحسين خبرتي في الذكاء الصنعي."
+                                >
+                                </blockquote>
+                                <p class="student-description"
+                                    data-en="Fadela enrolled in the 1st level of our Mentorship program, focusing on Arabic Sign Language classification. Utilizing the KArSL dataset, which contains 502 words, she faced significant challenges transitioning from signer-dependent to signer-independent settings. Now, at Level 2, Fadela is working on a solution to the signer over-fitting problem, combining image and pose features."
+                                    data-ar="فضيلة التحقت بالمستوى الأول من برنامجنا التوجيهي حيث قامت بالتركيز على مهمة التعرف على لغة الإشارة العربية. استعملت مجموعة البيانات KArSL التي تحوي على 502 إشارة، حيث واجهت تحدي كبير في الانتقال من نمط التصنيف الذي يعتمد على الشخص الذي يقوم بالإشارة، إلى نمط قادر على التعرف على الإشارة بغض النظر عن الشخص الذي يقوم بها. الآن في المستوى الثاني فضيلة تعمل على حل لمشكلة ال over-fitting على الشخص الذي يقوم بالإشارة و ذلك باستعمال ميزات من الصورة و من وضعية الشخص."
+                                >            
+                                </p>
+                                <div class="student-contact">
+                                    <a href="https://www.linkedin.com/in/fadelazidan/" class="linkedin-btn">
+                                        <i class="fab fa-linkedin"></i>
+                                        <span>Connect</span>
+                                    </a>
+                                    <a href="mailto:fadela.zidan@gmail.com" class="email-btn">
+                                        <i class="far fa-envelope"></i>
+                                        <span>Email</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="student-header">
+                                    <img src="images/students/male_student.png" alt="Ali Fadel" class="student-img">
+                                    <h3 class="student-name">Ali Fadel</h3>
+                                    <h4 class="student-city" data-en="Hama, Syria" data-ar="حماة، سوريا"></h4>
+                                </div>
+                                <blockquote class="student-quote"
+                                    data-en="I encourage everyone to join, explore the true essence of AI, and enjoy the enriching activities and valuable materials that truly expand your knowledge."
+                                    data-ar="أشجع الجميع على التسجيل في البرامج، حيث يمكنك تعلم جوهر الذكاء الصنعي بالإضافة إلى الاستمتاع بالأنشطة المفيدة و الاستفادة من المحتوى القيم لتوسيع معارفك عن الذكاء الصنعي."
+                                >
+                                    
+                                </blockquote>
+                                <p class="student-description"
+                                    data-en="Ali embarked on our Mentorship program at Level 1, dedicating his efforts to Arabic Sign Language classification. He tackled the KArSL dataset, which comprises 502 words, and navigated the complexities of transitioning from signer-dependent to signer-independent settings. Although he has yet to advance to Level 2, Ali is eager to continue his journey and work on solutions for signer over-fitting"
+                                    data-ar="شرع علي في البرنامج التوجيهي لدينا في المستوى الأول، مكرسًا جهوده لتصنيف لغة الإشارة العربية.
+                                    لقد تعامل مع مجموعة بيانات KArSL، التي تتألف من 502 إشارة، و تعامل مع تعقيدات الانتقال من الإعدادات المعتمدة على الشخص الذي يقوم بالإشارة إلى الإعدادات المستقلة عمن يقوم بها.
+                                    على الرغم من أنه لم يتقدم بعد إلى المستوى الثاني، إلا أن علي حريص على مواصلة رحلته والعمل على إيجاد حلول لمشكلة ال over-fitting على الأشخاص في بيانات التدريب، و هو موضوع المستوى الثاني في برنامجه."
+                                >
+                                    
+                                    
+                                    
+                                </p>
+                                <div class="student-contact">
+                                    <a href="https://www.linkedin.com/in/ali-fadel-4407b0245/" class="linkedin-btn">
+                                        <i class="fab fa-linkedin"></i>
+                                        <span>Connect</span>
+                                    </a>
+                                    <a href="mailto:alifadelammar@gmail.com" class="email-btn">
+                                        <i class="far fa-envelope"></i>
+                                        <span>Email</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Add more slides as needed -->
-                    </ul>
                 </div>
-                <button class="carousel-button carousel-button--right" aria-label="Next Slide">&rarr;</button>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
         
@@ -145,8 +219,12 @@
                 <a href="mailto:deep.torch.research@gmail.com"><i class="far fa-envelope"></i> deep.torch.research@gmail.com</a>
             </div>
         </div>
+        <div class="icons-attribution">
+            <a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Freepik - Flaticon</a>
+        </div>
     </footer>
 
-    <script src="js/language.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/swiper_lang.js"></script>
 </body>
 </html>
