@@ -577,11 +577,20 @@ footer {
     border-radius: 5px;
     text-decoration: none;
     margin-top: 1rem;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.linkedin-btn i {
+    font-size: 1.2em;
 }
 
 .linkedin-btn:hover {
     transform: translateY(-3px);
+    background: #08678C;
+    border: 1px solid #075473; /* Border color for better distinction on hover */
 }
+
 
 /* FAQ Page Styles */
 .faq-list {
@@ -946,3 +955,201 @@ footer {
     margin-right: 1.5rem;
 }
 
+/* Testimonials Section */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--accent-orange);
+}
+
+/* Swiper */
+.swiper-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 0;
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear; /* Optional: matches your original easing */
+}
+
+.swiper-slide {
+    height: auto; /* Maintain content height */
+}
+
+/* Custom navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.2rem;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    width: 95%; /* Slight margin */
+    height: 95%;
+    margin: 0 auto;
+    padding: 3.5rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #075473 0%, #08678C 100%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.student-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.student-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--accent-peach);
+}
+
+.student-name {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.student-city {
+    font-weight: lighter;
+}
+
+.student-quote {
+    font-style: italic;
+    color: var(--accent-peach);
+    position: relative;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--secondary-color);
+    margin: 1.5rem 0;
+}
+
+.student-quote::before {
+    content: open-quote;
+    font-size: 3rem;
+    position: absolute;
+    left: -0.5rem;
+    top: -1rem;
+    color: var(--secondary-color);
+}
+
+[dir="rtl"] .student-quote {
+    padding-right: 1.5rem;
+    border-right: 3px solid var(--secondary-color);
+    margin: 1.5rem 0;
+}
+
+[dir="rtl"] .student-quote::before {
+    right: -0.5rem;
+    top: -1rem;
+}
+
+blockquote:after {
+    content: no-close-quote
+}
+
+.student-description {
+    color: var(--secondary-bg);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Student Contact */
+.student-contact {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Refined Email Button */
+.email-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #28a745; /* Green color for email button */
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.email-btn i {
+    font-size: 1.2em;
+}
+
+.email-btn:hover {
+    transform: translateY(-3px);
+    background: #218838; /* Darker green for hover state */
+    border: 1px solid #1e7e34; /* Border color for better distinction on hover */
+}
+
+
+
+/* Icons */
+.contact-item i {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .testimonial-card {
+        padding: 15px;
+    }
+}
+
+.icons-attribution {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.icons-attribution a {
+    display: block;
+    text-decoration: none;
+    color: var(--secondary-bg);
+    font-size: small;
+    font-weight: 100;
+}
