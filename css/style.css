@@ -1153,3 +1153,128 @@ blockquote:after {
     font-size: small;
     font-weight: 100;
 }
+
+/* Referral Program Section */
+.referral-section {
+    background: var(--nav-footer);
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.referral-section h2 {
+    color: var(--accent-peach);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+.referral-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.referral-tier ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.referral-tier li {
+    padding: 1rem;
+    margin: 0.8rem 0;
+    background: rgba(242, 194, 136, 0.1);
+    border-radius: 8px;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.referral-tier li::before {
+    content: "▹";
+    color: var(--accent-orange);
+    position: absolute;
+    left: 1rem;
+}
+
+.referral-cta {
+    text-align: center;
+    padding: 2rem;
+    background: var(--nav-footer);
+    border-radius: 15px;
+}
+
+/* Add to CSS */
+.referral-btn {
+    background: linear-gradient(135deg, var(--accent-peach) 0%, var(--accent-orange) 100%);
+    color: var(--nav-footer) !important;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 4px 15px rgba(242, 194, 136, 0.3);
+    text-decoration: none;
+}
+
+.referral-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(242, 194, 136, 0.4);
+    background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-peach) 100%);
+}
+
+.referral-btn::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.referral-btn:hover::after {
+    left: 50%;
+    top: 50%;
+}
+
+.referral-btn i {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.referral-btn:hover i {
+    transform: translateX(3px);
+}
+
+/* RTL Adjustments */
+[dir="rtl"] .referral-btn:hover i {
+    transform: translateX(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .referral-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .referral-tier li {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .referral-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
