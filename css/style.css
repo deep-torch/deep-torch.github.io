@@ -628,25 +628,6 @@ footer {
     display: block;
 }
 
-/* Loyalty Program Styles */
-.loyalty-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.loyalty-card {
-    background: var(--main-bg);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.loyalty-card h3 {
-    color: var(--accent-peach);
-    margin-bottom: 1rem;
-}
 
 /* Program Detail Enhancements */
 .structure-grid {
@@ -685,37 +666,6 @@ footer {
     color: var(--accent-peach);
     margin-bottom: 1rem;
 }
-
-/* Costs Section */
-.costs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-.costs-card {
-    text-align: center;
-    padding: 1.5rem;
-    background: var(--nav-footer);
-    border-radius: 10px;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.costs-card:hover {
-    transform: translateY(-5px);
-}
-
-.costs-card i {
-    font-size: 2rem;
-    color: var(--accent-peach);
-    margin-bottom: 1rem;
-}
-
-.costs-value {
-    font-size: 3rem;
-}
-
 
 
 
